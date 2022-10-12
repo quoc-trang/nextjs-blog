@@ -1,14 +1,14 @@
 export interface Post {
   _id: string;
+  _createAt: string;
   title: string;
-  createAt: string;
   author: {
     name: string;
     image: string;
   };
   description: string;
   mainImage: {
-    assets: {
+    asset: {
       url: string;
     };
   };
@@ -16,7 +16,7 @@ export interface Post {
     current: string;
   };
   body: [object];
-  comments: [Comment];
+  comments: Comment[];
 }
 
 export interface Comment {
